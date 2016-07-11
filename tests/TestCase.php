@@ -2,8 +2,8 @@
 
 namespace Yhbyun\Securimage\Test;
 
-use Yhbyun\Securimage\SecurimageServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
+use Yhbyun\Securimage\SecurimageServiceProvider;
 
 class TestCase extends OrchestraTestCase
 {
@@ -15,7 +15,7 @@ class TestCase extends OrchestraTestCase
     protected function getPackageProviders($app)
     {
         return [
-            SecurimageServiceProvider::class
+            SecurimageServiceProvider::class,
         ];
     }
 }

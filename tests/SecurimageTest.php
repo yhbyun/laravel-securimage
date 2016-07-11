@@ -32,7 +32,7 @@ class SecurimageTest extends TestCase
         $this->assertSessionHas('securimage_code_value.default');
 
         // testing code check
-        $this->visit('securimage/check?captcha=' . $this->app['session.store']->get('securimage_code_value.default'))
+        $this->visit('securimage/check?captcha='.$this->app['session.store']->get('securimage_code_value.default'))
             ->see(json_encode(['valid' => true]));
 
         $this->visit('securimage/check?captcha=1111')
