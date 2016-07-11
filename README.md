@@ -1,5 +1,7 @@
 # Laravel 5 Securimage helper
 
+[![Build Status](https://travis-ci.org/yhbyun/laravel-securimage.svg?branch=master)](https://travis-ci.org/yhbyun/laravel-securimage)
+
 A simple laravel 5 wrapper package for [Securimage](https://www.phpcaptcha.org/).
 
 ![preview](https://raw.githubusercontent.com/yhbyun/resources/master/securimage/securimage.png)
