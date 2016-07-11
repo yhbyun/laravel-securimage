@@ -21,7 +21,7 @@ class SecurimageController extends Controller
     }
 
     /**
-     * Returns capcha image
+     * Returns capcha image.
      */
     public function getCaptcha()
     {
@@ -29,7 +29,7 @@ class SecurimageController extends Controller
     }
 
     /**
-     * Returns capcha audio
+     * Returns capcha audio.
      */
     public function getAudio()
     {
@@ -37,7 +37,7 @@ class SecurimageController extends Controller
     }
 
     /**
-     * Check whether the given code is correct
+     * Check whether the given code is correct.
      */
     public function check(Request $request)
     {
