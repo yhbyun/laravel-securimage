@@ -187,7 +187,7 @@ class Securimage extends SecurimageLib
                 $code_entered = strtolower($code_entered);
             }
 
-            if ((string) $code === (string) $code_entered) {
+            if ((string) $code === (string) $code_entered || $this->isTestEnvironment()) {
                 $this->correct_code = true;
                 if ($this->deleteSessionAfterValidation) {
                     session()->forget('securimage_code_disp.'.$this->namespace);
@@ -257,5 +257,15 @@ class Securimage extends SecurimageLib
         }
 
         return false;
+    }
+
+    /**
+     * Determine if application is in test environment.
+     *
+     * @return bool
+     */
+    protected function isTestEnvironment()
+    {
+        return app()->isLocal() && isset($_COOKIE['selenium_request']);
     }
 }
