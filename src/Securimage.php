@@ -41,6 +41,7 @@ class Securimage extends SecurimageLib
             'show_image_url'   => route('securimage'),
             'audio_play_url'   => route('securimage.audio'),
             'show_text_input'  => $this->config['securimage.show_text_input'],
+            'disable_flash_fallback' => $this->config['securimage.disable_flash_fallback'],
             'input_id'         => 'captcha',
         ];
 

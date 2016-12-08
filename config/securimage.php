@@ -16,4 +16,5 @@ return [
 
     // Set false if you want to user your own input text
     'show_text_input' => env('SECURIMAGE_SHOW_TEXT_INPUT', true),
+    'disable_flash_fallback' => true,
 ];
