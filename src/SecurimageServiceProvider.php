@@ -52,7 +52,7 @@ class SecurimageServiceProvider extends ServiceProvider
         $path = __DIR__.'/../config/securimage.php';
         $this->mergeConfigFrom($path, 'securimage');
 
-        $this->app['securimage'] = $this->app->share(function ($app) {
+        $this->app->singleton('securimage', function ($app) {
             return new Securimage($this->app['config']);
         });
     }
